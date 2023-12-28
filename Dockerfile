@@ -7,6 +7,7 @@ COPY service /service
 WORKDIR /service
 EXPOSE 8080
 
+RUN apk add postgresql-client build-base postgresql-dev
 
 RUN pip install -r /temp/requirements.txt
 
